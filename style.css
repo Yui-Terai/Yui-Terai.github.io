@@ -87,18 +87,22 @@ img {
   font-family: "Lancelot", cursive;
 }
 
+.contact-detail h5 a {
+  text-decoration: none;
+}
+
 .portfolio-link {
   font-family: "Lancelot", cursive;
 }
 
-
-.portfolio-link a:hover, .contact-detail a:hover {
-  color: #ff9999;
+.project-link {
+  text-decoration: none;
 }
 
-
-
-
+.portfolio-link a:hover,
+.contact-detail a:hover {
+  color: #ff9999;
+}
 
 .portfolio-description {
   font-family: "Source Sans Pro", sans-serif;
