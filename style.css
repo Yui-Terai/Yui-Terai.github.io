@@ -1,12 +1,145 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*****************************************************************************************************/
+/********************************************** Start Style ******************************************/
+/*****************************************************************************************************/
+
 .body {
-  background: #f5f5f5;
+  background: #fff8eb;
   color: #080808;
-  height: 100vh;
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body a {
   color: #080808;
 }
+
+/********************************************** Side Bar **************************************/
 
 .sidebar {
   height: 100%;
@@ -18,13 +151,12 @@ body a {
   background-color: #191919;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 1.5625rem;
   color: #555555;
   display: block;
   transition: 0.3s;
@@ -32,28 +164,236 @@ body a {
 
 .sidebar a:hover {
   color: #f8f8f8;
+  text-decoration: none;
 }
 
 .sidebar .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  right: 1.5625rem;
+  font-size: 2.25rem;
+  margin-left: 3.125rem;
 }
 
 .openbtn {
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
-  background: #f5f5f5;
-  color: #080808;
-  padding: 10px 15px;
+  background: transparent;
+  padding: 0.625rem 0.9375rem;
   border: none;
+}
+
+.openbtn:focus {
+  outline: none;
 }
 
 #main {
   transition: margin-left 0.5s;
-  padding: 16px;
+  padding: 1rem;
+}
+
+/********************************************** Shared style ****************************************/
+
+.main-page,
+.modal-title,
+.contact-text,
+.portfolio-text h3 {
+  font-family: "Cantata One", serif;
+}
+
+.modal-link,
+.contact-info {
+  font-family: "Lancelot", cursive;
+}
+
+.heart:hover,
+.modal-link a:hover,
+.contact-info a:hover {
+  color: #ff9999;
+  text-decoration: none;
+}
+
+/********************************************** Portfolio ****************************************/
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(488px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio-info {
+  display: grid;
+  text-align: center;
+}
+
+.portfolio-img {
+  position: relative;
+}
+
+.portfolio-img img {
+  width: 70%;
+}
+
+.overlay-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffc60032;
+  position: absolute;
+  width: 70%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  margin: auto;
+}
+
+.portfolio-img:hover .portfolio-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.portfolio-overlay button {
+  display: block;
+  position: absolute;
+  margin: auto;
+  background: none;
+  color: #f8f8f8;
+  font-weight: 100;
+}
+
+.portfolio-overlay button:focus {
+  outline: none;
+}
+
+.portfolio-text {
+  display: grid;
+  padding: 1rem 5rem;
+}
+
+.modal-header button:focus {
+  outline: none;
+}
+
+.modal-tech {
+  font-size: 0.8rem;
+  color: #616069;
+}
+
+/********************************************** Main Page ****************************************/
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem;
+  font-size: 4.2rem;
+}
+
+/********************************************** Contact Page ****************************************/
+
+.contact,
+.contact-text,
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  margin: 10rem;
+}
+
+.contact-text {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  font-size: 2rem;
+}
+
+/********************************************** Media Query ****************************************/
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .main-page {
+    margin: 8rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .portfolio-text h3 {
+    font-size: 2rem;
+  }
+
+  .portfolio-text p {
+    font-size: 1.3rem;
+  }
+
+  .modal-body {
+    font-size: 1.5rem;
+  }
+
+  .modal-tech {
+    font-size: 1.19rem;
+  }
+
+  .contact {
+    text-align: center;
+    margin: 11rem 0;
+  }
+
+  .contact-text {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  .main-page {
+    margin: 6rem 0;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .modal-body {
+    font-size: 1.1rem;
+  }
+
+  .modal-tech {
+    font-size: 0.9rem;
+  }
+
+  .contact {
+    margin: 8rem 0;
+  }
+
+  .contact-text {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    font-size: 1.4rem;
+  }
+}
+
+/* .contact-detail {
+  margin-top: 6.875rem;
 }
 
 @media screen and (max-height: 450px) {
@@ -65,113 +405,17 @@ body a {
   }
 }
 
-img {
-  width: 200px;
-  height: 200px;
-}
-
-.portfolio-img {
-  position: absolute;
-  top: 21%;
-  left: 36%;
-}
-
-.main-page-introduction,
-.contact-info,
-.portfolio-title {
-  font-family: "Cantata One", serif;
-}
-
-.contact-detail {
-  margin-top: 110px;
-  font-family: "Lancelot", cursive;
-}
-
-.contact-detail h5 a {
-  text-decoration: none;
-}
-
-.portfolio-link {
-  font-family: "Lancelot", cursive;
-}
-
-.project-link {
-  text-decoration: none;
-}
-
-.portfolio-link a:hover,
-.contact-detail a:hover {
-  color: #ff9999;
-}
-
-.portfolio-description {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
 @media screen and (min-width: 320px) and (max-width: 425px) {
-  .portfolio-paragraph-1 {
-    margin-top: 53px;
-  }
-
-  .portfolio-paragraph-2 {
-    margin-top: 20px;
-  }
-
-  .portfolio-paragraph-3 {
-    margin-top: 105px;
-  }
-
+  
   .contact-info {
     font-size: 21px;
   }
 
-  .main-page-introduction {
-    font-size: 30px;
-  }
-
-  .row {
-    margin-bottom: 65px;
-  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .contact-info {
     font-size: 28px;
   }
-
-  .main-page-introduction {
-    font-size: 50px;
-  }
-
-  .row {
-    margin-bottom: 135px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .contact-info {
-    font-size: 38px;
-  }
-
-  .main-page-introduction {
-    font-size: 70px;
-  }
-
-  .row {
-    margin-bottom: 180px;
-  }
-}
-
-@media screen and (min-width: 1201px) {
-  .contact-info {
-    font-size: 48px;
-  }
-
-  .main-page-introduction {
-    font-size: 80px;
-  }
-
-  .row {
-    margin-bottom: 180px;
-  }
-}
+  
+} */

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -13,6 +16,21 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -25,6 +43,8 @@
     />
   </head>
 
+  <!---------------------------------------------------------- Body ----------------------------------------------------->
+
   <body class="body">
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -36,7 +56,280 @@
     <div id="main">
       <button class="openbtn" onclick="openNav()">||||</button>
 
-      <div class="container my-5">
+      <div class="portfolio">
+        <div class="portfolio-info">
+          <div class="portfolio-img">
+            <img src="https://source.unsplash.com/PF1l1F1hzoU/1600x900" />
+            <div class="overlay-wrapper">
+              <div class="portfolio-overlay">
+                <button data-toggle="modal" data-target="#modal-giggin">
+                  view
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-text">
+            <h3>Giggin'</h3>
+            <p>
+              - Customizable music app -
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-info">
+          <div class="portfolio-img">
+            <img src="https://source.unsplash.com/E6HjQaB7UEA/1600x900" />
+            <div class="overlay-wrapper">
+              <div class="portfolio-overlay">
+                <button data-toggle="modal" data-target="#modal-hungrii">
+                  view
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-text">
+            <h3>Hungrii</h3>
+            <p>
+              - Food finder app -
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-info">
+          <div class="portfolio-img">
+            <img src="https://source.unsplash.com/IocJwyqRv3M/1600x900" />
+            <div class="overlay-wrapper">
+              <div class="portfolio-overlay">
+                <button data-toggle="modal" data-target="#modal-tokyo">
+                  view
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-text">
+            <h3>Tokyo Walker</h3>
+            <p>
+              - Tokyo city guide app -
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-info">
+          <div class="portfolio-img">
+            <div class="overlay-wrapper">
+              <div class="portfolio-overlay">
+                <button data-toggle="modal" data-target="#modal-photo">
+                  view
+                </button>
+              </div>
+            </div>
+            <img src="https://source.unsplash.com/spAkZnUleVw/1600x900" />
+          </div>
+          <div class="portfolio-text">
+            <h3>Photo Journal</h3>
+            <p>
+              - Personal photo managed app -
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------------------------------------------- Modal ---------------------------------------------------->
+
+      <div
+        class="modal fade"
+        id="modal-giggin"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">
+                🎵Giggin'🎵
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                A customizable music app to create your own playlist.<br />
+                Find your favorite music by song, artist or album through
+                Spotyfi API. The playlist that you made will be added on your
+                Spotyfi.
+              </p>
+              <p class="modal-tech">
+                Technology used: <br />
+                Java Script/React.js/HTML/CSS/<br />
+                Sass/Node.js/Spotyfi API/Surge
+              </p>
+              <p class="modal-link">
+                <a href="http://gigging.surge.sh/">
+                  <i class="fas fa-eye"></i>&nbsp;check it out!</a
+                >&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                  href="https://github.com/Yui-Terai/giggin"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-hungrii"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">
+                🍔Hungrii🍔
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                A yelp like food finder app that will help you to find a eating
+                place.<br />
+                Hungry? But you don't know where to go? Search a place with a
+                keyword like food, restaurant or category. You can also filter
+                them by best match, rating or review as well.
+              </p>
+              <p class="modal-tech">
+                Technology used: <br />
+                Java Script/React.js/HTML/CSS/<br />
+                Sass/Node.js/Yelp API/Surge
+              </p>
+              <p class="modal-link">
+                <a href="http://hungrii.surge.sh/">
+                  <i class="fas fa-eye"></i>&nbsp;check it out!</a
+                >&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                  href="https://github.com/Yui-Terai/hungrii"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-tokyo"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">
+                🌏Tokyo Walker🌏
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                A city guide app which gives you ideas to discover Tokyo.<br />
+                You can keep track locations as your favourite, and look back at
+                them whenever you want while walking around in Tokyo!
+              </p>
+              <p class="modal-tech">
+                Technology used: <br />
+                Java Script/React.js/HTML/CSS/Bootstrap/<br />
+                Node.js/webpack/PostgreSQL/Express.js/<br />
+                Google maps API/Heroku
+              </p>
+              <p class="modal-link">
+                <a href="https://boiling-castle-46841.herokuapp.com/">
+                  <i class="fas fa-eye"></i>&nbsp;check it out!</a
+                >&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                  href="https://github.com/Yui-Terai/tokyo-walker"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-photo"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">
+                📷Photo Journal📷
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                A personal photo managed app that inspires you to make your
+                photography more personally and meaningful.<br />
+                It gives you the ability to add a description, and organise
+                photos in albums.
+              </p>
+              <p class="modal-tech">
+                Technology used: <br />
+                Java Script/HTML/CSS/Node.js/<br />
+                PostgreSQL/Express.js/Heroku
+              </p>
+              <p class="modal-link">
+                <a href="https://glacial-spire-99716.herokuapp.com/">
+                  <i class="fas fa-eye"></i>&nbsp;check it out!</a
+                >&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                  href="https://github.com/Yui-Terai/photo-journal"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container my-5">
         <div class="row">
           <div
             class="col-md-5 col-sm-6 d-flex justify-content-start position-relative"
@@ -121,7 +414,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div>  -->
     </div>
     <script src="script.js"></script>
   </body>
