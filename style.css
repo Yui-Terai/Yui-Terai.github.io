@@ -213,13 +213,24 @@ body a {
   text-decoration: none;
 }
 
+/********************************************** Main Page ****************************************/
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0;
+  font-size: 4.2rem;
+}
+
 /********************************************** Portfolio ****************************************/
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(488px, 1fr));
   grid-gap: 1rem;
-  margin-top: 2rem;
+  margin: 4rem 0;
   justify-items: center;
 }
 
@@ -269,9 +280,9 @@ body a {
   margin: auto;
   background: none;
   color: #f8f8f8;
+  font-size: 1.3rem;
   font-weight: 100;
-  border: 0.085rem solid #f8f8f8;
-  border-radius: 100%;
+  border: none;
 }
 
 .portfolio-overlay button:focus {
@@ -292,17 +303,6 @@ body a {
   color: #616069;
 }
 
-/********************************************** Main Page ****************************************/
-
-.main-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 6rem;
-  font-size: 4.2rem;
-}
-
 /********************************************** Contact Page ****************************************/
 
 .contact,
@@ -315,7 +315,7 @@ body a {
 }
 
 .contact {
-  margin: 10rem;
+  margin: 10rem 0;
 }
 
 .contact-text {
@@ -331,12 +331,13 @@ body a {
 
 @media only screen and (min-width: 320px) and (max-width: 425px) {
   .main-page {
-    margin: 6rem 0;
+    margin: 4rem 0;
     font-size: 1.6rem;
     text-align: center;
   }
 
   .portfolio {
+    margin: 3rem 0;
     grid-template-columns: 1fr;
   }
 
@@ -381,9 +382,13 @@ body a {
 
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
   .main-page {
-    margin: 6rem 0;
+    margin: 5rem 0;
     font-size: 3rem;
     text-align: center;
+  }
+
+  .portfolio {
+    margin: 2rem 0;
   }
 
   .modal-body {
@@ -395,7 +400,7 @@ body a {
   }
 
   .contact {
-    margin: 6rem 0;
+    margin: 8rem 0;
   }
 
   .contact-text {
